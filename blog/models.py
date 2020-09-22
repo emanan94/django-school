@@ -14,7 +14,7 @@ class Post(models.Model): #db table
     active = models.BooleanField(default = False)
     author_mail = models.EmailField(default='')
     typee = models.CharField(choices=post_type ,default='draft', max_length=20 )
-    image = models.ImageField(upload_to = 'post/' , null=True , blank=True)
+    image = models.ImageField(upload_to = 'post/' )
 
 
     def __str__(self):
