@@ -1,0 +1,12 @@
+<!--links called by namespace from main url then by name from sub url-->
+
+<h1><a href="{% url 'blog:blog_list' %}">Welcom to our blog</a></h1>
+
+<h3><a href="{% url 'blog:new_post'%}">Add new post</a></h3>
+<hr>
+<!--<p>{{posts}}</p>-->
+<!--or-->
+{% for x in object_list %}
+   <!--have to call the namespace of the app from main url : name of sub url then take an id -->
+   <h3><a href="{% url 'blog:blog_detail' x.id %}">{{x}}</a></h3>
+{% endfor %}
