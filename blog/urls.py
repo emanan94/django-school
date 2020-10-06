@@ -12,6 +12,6 @@ urlpatterns = [
     #path('<int:id>/edit',post_edit, name='post_edit'),
 
     path('cbv',PostList.as_view()), # as_view used cause url take only function
-    path('cbv/<int:pk>',PostDetail.as_view()),
+    path('cbv/<int:pk>',PostDetail.as_view()  ,name='cbv_detail'),
     path('cbv/<int:pk>/edit',PostUpdate.as_view())
 ]

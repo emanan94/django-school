@@ -8,5 +8,10 @@
 <!--or-->
 {% for x in object_list %}
    <!--have to call the namespace of the app from main url : name of sub url then take an id -->
-   <h3><a href="{% url 'blog:blog_detail' x.id %}">{{x}}</a></h3>
+ <!--  <h3><a href="{% url 'blog:blog_detail' x.id %}">{{x}}</a></h3>-->
+
+ <!--or-->
+  <!--using instance method-->
+
+ <h3><a href="{{x.get_absolute_url}}">{{x}}</a></h3>
 {% endfor %}
