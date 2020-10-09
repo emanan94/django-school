@@ -1,0 +1,11 @@
+
+<!--user data-->
+{{profile.user.username}}  
+{{profile.user.email}}
+
+
+<!--profile data-->
+{{profile.phone_number}}
+{{profile.adress}}
+
+<h3><a href="{% url 'accounts:profile_edit' %}">Edit profile</a></h3><!--links called by namespace from main url : by name of sub url-->

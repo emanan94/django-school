@@ -43,7 +43,7 @@ class Post(models.Model): #db table
 
 
 class Ccomment(models.Model):
-    post = models.ForeignKey(Post,on_delete=models.CASCADE) #db relationships
+    post = models.ForeignKey(Post,on_delete=models.CASCADE) #db relationships # (cascade) to delete  comment if post has deleted
     text = models.TextField(max_length=200)
 
 

@@ -3,7 +3,7 @@ from .models import Post
 
 class PostForm(forms.ModelForm):
     class Meta:       #to define form
-        model = Post #Post class
+        model = Post 
      #   fields = '__all__' 
 
      #  fields = ['content','image'] #to show specific fields
